@@ -19,7 +19,7 @@ yarn add react-popups
 -   Optin Panel (right/left)
 
 ## React
-
+```jsx
     import { Popups, popup } from 'react-popups';
     
     // ...
@@ -32,3 +32,4 @@ yarn add react-popups
         </div>
       );
     }
+```
