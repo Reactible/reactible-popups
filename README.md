@@ -1,5 +1,5 @@
 # React-Popups
-![React popup component](https://cdn.dribbble.com/userupload/10126629/file/original-5bf25d6d4a89a0de0898f8c495bac50e.png?resize=1024x768)
+![reactpopups](https://github.com/Reactible/react-popups/assets/12425932/6590a235-cd4d-4b5a-bad2-2acb05923d19)
 React-Popups allows you to create and customize web popups faster with lots of options.
 
 ## Installation
