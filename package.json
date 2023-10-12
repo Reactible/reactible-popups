@@ -12,7 +12,8 @@
     "build": "tsup src/index.tsx --format esm,cjs --dts",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "dev": "tsup src/index.tsx --watch"
+    "dev": "tsup src/index.tsx --watch",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -45,7 +46,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "husky": "^8.0.0"
   },
   "peerDependencies": {
     "react": "^18.0.0",
