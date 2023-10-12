@@ -1,8 +1,6 @@
 import React from 'react';
 
-type popupsProps = {};
+type PopupsProps = {};
 
-const popups: React.FC<popupsProps> = () => {
-    return <div>Have a good coding</div>;
-};
+const popups: React.FC<PopupsProps> = () => <div>Have a good coding</div>;
 export default popups;
