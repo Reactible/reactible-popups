@@ -1,6 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 
-// Delete me
-export const Thing = () => {
-  return <div>Welcome to your first test package.</div>;
+type popupsProps = {};
+
+const popups: React.FC<popupsProps> = () => {
+    return <div>Have a good coding</div>;
 };
+export default popups;
