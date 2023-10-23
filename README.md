@@ -1,10 +1,10 @@
 # React-Popups (Under Dev)
 
-![reactible-popups](https://github.com/Reactible/react-popups/assets/12425932/e407902a-4ab0-4c43-9456-b6aa3d28fb4b)
+![React-Popups](https://github.com/Reactible/react-popups/assets/12425932/62e2d612-a52b-47e0-b510-165ca71b488d)
 
-Reactible-popups allows you to create and customize web popups faster with lots
+Reactible-popups allow you to create and customize web popups faster with lots
 of options. (Please don't use the package for now, the final version will be
-published soon v1.0.0, please follow me on twitter:
+published soon v1.0.0, please follow me on Twitter:
 https://twitter.com/RachidLajmi)
 
 ## Installation
