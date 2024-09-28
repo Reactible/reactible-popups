@@ -1,0 +1,18 @@
+.panel {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  }

@@ -1,10 +1,10 @@
 {
-  "name": "react-popups",
+  "name": "reactible-popups",
   "version": "0.1.4",
   "description": "Reactible-popups allows you to create and customize web popups faster with lots of options.",
-  "main": "dist/react-popups.umd.js",
-  "module": "dist/react-popups.es.js",
-  "types": "dist/types/index.d.ts",
+  "main": "dist/reactible-popups.umd.js",
+  "module": "dist/reactible-popups.es.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -14,7 +14,14 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "keywords": ["react", "popup", "component", "library", "npm", "open-source"],
+  "keywords": [
+    "react",
+    "popup",
+    "component",
+    "library",
+    "npm",
+    "open-source"
+  ],
   "author": "Rachid Lajmi <lajmirachid@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
@@ -22,11 +29,13 @@
     "react-dom": "^17.0.0 || ^18.0.0"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@types/node": "^22.7.4",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",

@@ -1,0 +1,36 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popupContainer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+  }
+  
+  .top-left { align-self: flex-start; margin-top: 20px; margin-left: 20px; }
+  .top-center { align-self: flex-start; margin-top: 20px; }
+  .top-right { align-self: flex-start; margin-top: 20px; margin-right: 20px; }
+  .middle-left { align-self: center; margin-left: 20px; }
+  .center { align-self: center; }
+  .middle-right { align-self: center; margin-right: 20px; }
+  .bottom-left { align-self: flex-end; margin-bottom: 20px; margin-left: 20px; }
+  .bottom-center { align-self: flex-end; margin-bottom: 20px; }
+  .bottom-right { align-self: flex-end; margin-bottom: 20px; margin-right: 20px; }
+  
+  @media (max-width: 768px) {
+    .popupContainer {
+      max-width: 95%;
+    }
+  }

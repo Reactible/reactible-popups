@@ -1,0 +1,21 @@
+.content {
+    text-align: center;
+  }
+  
+  .title {
+    margin-bottom: 10px;
+  }
+  
+  .message {
+    margin-bottom: 20px;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .buttonGroup button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }

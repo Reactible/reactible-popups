@@ -1,50 +1,136 @@
-# React + TypeScript + Vite
+# Reactible Popups
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Reactible-popups allows you to create and customize web popups faster with lots of options.
 
-Currently, two official plugins are available:
+## Installation
+bash
+npm install reactible-popups
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Usage
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Popup01: Image Popup with External Link
 
-- Configure the top-level `parserOptions` property like this:
+```jsx
+import React, { useState } from 'react';
+import { Popup01 } from 'reactible-popups';
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+const App = () => {
+const [isOpen, setIsOpen] = useState(false);
+
+return (
+<Popup01
+isOpen={isOpen}
+onClose={() => setIsOpen(false)}
+imageUrl="https://example.com/image.jpg"
+linkUrl="https://example.com"
+/>
+);
+};
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Popup02: Age Verification Popup
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```jsx
+import React, { useState } from 'react';
+import { Popup02 } from 'reactible-popups';
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+const App = () => {
+const [isOpen, setIsOpen] = useState(false);
+
+return (
+<Popup02
+isOpen={isOpen}
+onClose={() => setIsOpen(false)}
+title="Age Verification"
+message="Are you 18 years or older?"
+onConfirm={() => console.log('User confirmed')}
+onDeny={() => console.log('User denied')}
+/>
+);
+};
 ```
+
+### Popup03: Email Subscription Popup
+
+```jsx
+import React, { useState } from 'react';
+import { Popup03 } from 'reactible-popups';
+
+const App = () => {
+const [isOpen, setIsOpen] = useState(false);
+
+return (
+<Popup03
+isOpen={isOpen}
+onClose={() => setIsOpen(false)}
+title="Subscribe to Our Newsletter"
+description="Get the latest updates directly to your inbox!"
+onSubscribe={(email) => console.log('Subscribed:', email)}
+/>
+);
+};
+```
+
+## API Reference
+
+### Common Props
+
+All popups share these common props:
+
+- `isOpen` (boolean): Controls the visibility of the popup.
+- `onClose` (function): Callback function to close the popup.
+- `position` (string, optional): Position of the popup. Options: 'top-left', 'top-center', 'top-right', 'middle-left', 'center', 'middle-right', 'bottom-left', 'bottom-center', 'bottom-right'. Default: 'center'.
+
+### Popup01 Props
+
+- `imageUrl` (string): URL of the image to display.
+- `linkUrl` (string): URL to navigate to when the image is clicked.
+
+### Popup02 Props
+
+- `title` (string): Title of the popup.
+- `message` (string): Message displayed in the popup.
+- `onConfirm` (function): Action to perform if the user clicks "Yes".
+- `onDeny` (function): Action to perform if the user clicks "No".
+
+### Popup03 Props
+
+- `title` (string): Title of the popup.
+- `description` (string): Description or message.
+- `backgroundImage` (string, optional): URL of the background image.
+- `onSubscribe` (function): Action to perform on subscription.
+
+## Hooks
+
+### useExitIntent
+
+```jsx
+import { useExitIntent } from 'reactible-popups';
+
+useExitIntent(() => setIsOpen(true), true);
+```
+
+### useScrollPercentage
+
+```jsx
+import { useScrollPercentage } from 'reactible-popups';
+
+useScrollPercentage(() => setIsOpen(true), 50, true);
+```
+
+### useInactivityTimer
+
+```jsx
+import { useInactivityTimer } from 'reactible-popups';
+
+useInactivityTimer(() => setIsOpen(true), 30, true);
+```
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
