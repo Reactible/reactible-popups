@@ -1,6 +1,20 @@
 # Reactible Popups
 
-Reactible-popups allows you to create and customize web popups faster with lots of options.
+Reactible Popups is a versatile and customizable React popup component library designed to meet various popup needs in modern web applications. It offers a single, flexible `<Popup>` component that can be easily integrated into any React project.
+
+## Features
+
+- TypeScript support for enhanced developer experience
+- Customizable animations for smooth enter/exit transitions
+- Accessibility features including keyboard navigation and screen reader support
+- Multiple trigger options (exit intent, scroll percentage, inactivity timer, etc.)
+- Screen locking capability
+- Configurable open delay
+- Full-screen overlay option
+- Slide-in popup functionality
+- Sticky bar mode
+- Customizable overlay color and opacity
+- Flexible positioning
 
 ## Installation
 bash
@@ -9,128 +23,68 @@ npm install reactible-popups
 
 ## Usage
 
-### Popup01: Image Popup with External Link
+Here's a basic example of how to use the Reactible Popups component:
 
 ```jsx
 import React, { useState } from 'react';
-import { Popup01 } from 'reactible-popups';
+import { Popup } from 'reactible-popups';
 
 const App = () => {
 const [isOpen, setIsOpen] = useState(false);
 
 return (
-<Popup01
+<div>
+<button onClick={() => setIsOpen(true)}>Open Popup</button>
+<Popup
 isOpen={isOpen}
 onClose={() => setIsOpen(false)}
-imageUrl="https://example.com/image.jpg"
-linkUrl="https://example.com"
-/>
+position="center"
+overlayColor="rgba(0, 0, 0, 0.5)"
+overlayOpacity={0.5}
+closeOnOverlayClick={true}
+closeOnEscapeKey={true}
+>
+<h2>Welcome to our site!</h2>
+<p>This is a demo of our versatile Popup component.</p>
+<button onClick={() => setIsOpen(false)}>Close</button>
+</Popup>
+</div>
 );
 };
+
+export default App;
 ```
 
-### Popup02: Age Verification Popup
+## API
 
-```jsx
-import React, { useState } from 'react';
-import { Popup02 } from 'reactible-popups';
-
-const App = () => {
-const [isOpen, setIsOpen] = useState(false);
-
-return (
-<Popup02
-isOpen={isOpen}
-onClose={() => setIsOpen(false)}
-title="Age Verification"
-message="Are you 18 years or older?"
-onConfirm={() => console.log('User confirmed')}
-onDeny={() => console.log('User denied')}
-/>
-);
-};
-```
-
-### Popup03: Email Subscription Popup
-
-```jsx
-import React, { useState } from 'react';
-import { Popup03 } from 'reactible-popups';
-
-const App = () => {
-const [isOpen, setIsOpen] = useState(false);
-
-return (
-<Popup03
-isOpen={isOpen}
-onClose={() => setIsOpen(false)}
-title="Subscribe to Our Newsletter"
-description="Get the latest updates directly to your inbox!"
-onSubscribe={(email) => console.log('Subscribed:', email)}
-/>
-);
-};
-```
-
-## API Reference
-
-### Common Props
-
-All popups share these common props:
+The `<Popup>` component accepts the following props:
 
 - `isOpen` (boolean): Controls the visibility of the popup.
 - `onClose` (function): Callback function to close the popup.
-- `position` (string, optional): Position of the popup. Options: 'top-left', 'top-center', 'top-right', 'middle-left', 'center', 'middle-right', 'bottom-left', 'bottom-center', 'bottom-right'. Default: 'center'.
+- `children` (ReactNode): Content to be displayed inside the popup.
+- `position` (string, optional): Position of the popup. Options: 'center', 'top', 'bottom', 'left', 'right', 'top-left', 'top-right', 'bottom-left', 'bottom-right'. Default: 'center'.
+- `overlayColor` (string, optional): Color of the overlay. Default: 'rgba(0, 0, 0, 0.5)'.
+- `overlayOpacity` (number, optional): Opacity of the overlay. Default: 0.5.
+- `closeOnOverlayClick` (boolean, optional): Whether to close the popup when clicking on the overlay. Default: true.
+- `closeOnEscapeKey` (boolean, optional): Whether to close the popup when pressing the Escape key. Default: true.
 
-### Popup01 Props
+## Future Plans
 
-- `imageUrl` (string): URL of the image to display.
-- `linkUrl` (string): URL to navigate to when the image is clicked.
+We are continuously working to improve Reactible Popups and add new features. Here's what we have planned for future releases:
 
-### Popup02 Props
+1. Animations: Add customizable enter/exit animations.
+2. Additional trigger mechanisms: Implement scroll percentage and inactivity timer triggers.
+3. Screen locker: Add the ability to lock the screen behind the popup.
+4. Open delay: Implement a configurable delay before opening the popup.
+5. Full screen mode: Add support for full-screen popups.
+6. Slide-in popup: Implement a slide-in animation option.
+7. Sticky bar: Add a sticky bar mode for the popup.
+8. Enhanced accessibility: Improve keyboard navigation and screen reader support.
+9. Theming system: Implement a theming system for easy customization.
+10. Server-side rendering support: Ensure compatibility with SSR frameworks like Next.js.
 
-- `title` (string): Title of the popup.
-- `message` (string): Message displayed in the popup.
-- `onConfirm` (function): Action to perform if the user clicks "Yes".
-- `onDeny` (function): Action to perform if the user clicks "No".
-
-### Popup03 Props
-
-- `title` (string): Title of the popup.
-- `description` (string): Description or message.
-- `backgroundImage` (string, optional): URL of the background image.
-- `onSubscribe` (function): Action to perform on subscription.
-
-## Hooks
-
-### useExitIntent
-
-```jsx
-import { useExitIntent } from 'reactible-popups';
-
-useExitIntent(() => setIsOpen(true), true);
-```
-
-### useScrollPercentage
-
-```jsx
-import { useScrollPercentage } from 'reactible-popups';
-
-useScrollPercentage(() => setIsOpen(true), 50, true);
-```
-
-### useInactivityTimer
-
-```jsx
-import { useInactivityTimer } from 'reactible-popups';
-
-useInactivityTimer(() => setIsOpen(true), 30, true);
-```
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+We welcome contributions from the community. If you'd like to contribute, please check out our [Contributing Guidelines](CONTRIBUTING.md).
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License.
