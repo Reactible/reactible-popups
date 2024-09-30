@@ -33,23 +33,23 @@ const App = () => {
 const [isOpen, setIsOpen] = useState(false);
 
 return (
-<div>
-<button onClick={() => setIsOpen(true)}>Open Popup</button>
-<Popup
-isOpen={isOpen}
-onClose={() => setIsOpen(false)}
-position="center"
-overlayColor="rgba(0, 0, 0, 0.5)"
-overlayOpacity={0.5}
-closeOnOverlayClick={true}
-closeOnEscapeKey={true}
->
-<h2>Welcome to our site!</h2>
-<p>This is a demo of our versatile Popup component.</p>
-<button onClick={() => setIsOpen(false)}>Close</button>
-</Popup>
-</div>
-);
+  <div>
+    <button onClick={() => setIsOpen(true)}>Open Popup</button>
+    <Popup
+      isOpen={isOpen}
+      onClose={() => setIsOpen(false)}
+      position="center"
+      overlayColor="rgba(0, 0, 0, 0.5)"
+      overlayOpacity={0.5}
+      closeOnOverlayClick={true}
+      closeOnEscapeKey={true}
+    >
+      <h2>Welcome to our site!</h2>
+      <p>This is a demo of our versatile Popup component.</p>
+      <button onClick={() => setIsOpen(false)}>Close</button>
+    </Popup>
+  </div>
+  );
 };
 
 export default App;
