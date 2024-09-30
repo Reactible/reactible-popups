@@ -17,8 +17,9 @@ Reactible Popups is a versatile and customizable React popup component library d
 - Flexible positioning
 
 ## Installation
-bash
+```bash
 npm install reactible-popups
+```
 
 
 ## Usage
