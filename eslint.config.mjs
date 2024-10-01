@@ -4,7 +4,7 @@ import tsParser from '@typescript-eslint/parser';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import a11yPlugin from 'eslint-plugin-jsx-a11y';
-import prettier from 'eslint-config-prettier';
+import prettierConfig from 'eslint-config-prettier';
 
 export default [
   js.configs.recommended,
@@ -77,5 +77,5 @@ export default [
       'jsx-a11y/no-static-element-interactions': 'warn',
     },
   },
-  prettier,
+  prettierConfig,
 ];
