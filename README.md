@@ -1,5 +1,9 @@
 ![Build Status](https://github.com/Reactible/reactible-popups/actions/workflows/ci.yml/badge.svg)
 
+![License](https://img.shields.io/github/license/Reactible/reactible-popups)
+
+![npm](https://img.shields.io/npm/v/reactible-popups)
+
 # Reactible Popups
 
 Reactible Popups is a versatile and customizable React popup component library designed to meet various popup needs in modern web applications. It offers a single, flexible `<Popup>` component that can be easily integrated into any React project.
