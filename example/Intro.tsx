@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import PopupDemo from './pages/PopupDemo';
 
-const DemoComponent: React.FC = () => {
+const Intro: React.FC = () => {
   return (
     <Router>
-      <div>
+      <div className="App">
         <nav>
           <ul>
             <li>
@@ -23,4 +23,4 @@ const DemoComponent: React.FC = () => {
   );
 };
 
-export default DemoComponent;
+export default Intro;

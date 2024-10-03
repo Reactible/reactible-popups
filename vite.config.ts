@@ -28,6 +28,12 @@ export default defineConfig({
     },
   },
   server: {
-    open: '/example/index.html',
+    open: true,
+  },
+  root: './example',
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
+    },
   },
 });
