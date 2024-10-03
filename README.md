@@ -1,8 +1,4 @@
-![Build Status](https://github.com/Reactible/reactible-popups/actions/workflows/ci.yml/badge.svg)
-
-![License](https://img.shields.io/github/license/Reactible/reactible-popups)
-
-![npm](https://img.shields.io/npm/v/reactible-popups)
+![Build Status](https://github.com/Reactible/reactible-popups/actions/workflows/ci.yml/badge.svg) ![License](https://img.shields.io/github/license/Reactible/reactible-popups) ![npm](https://img.shields.io/npm/v/reactible-popups) ![npm](https://img.shields.io/npm/dt/reactible-popups)
 
 # Reactible Popups
 
