@@ -7,7 +7,16 @@ interface BasePopupProps {
   onClose: () => void;
   overlayColor?: string;
   overlayOpacity?: number;
-  position?: 'top-left' | 'top-center' | 'top-right' | 'middle-left' | 'center' | 'middle-right' | 'bottom-left' | 'bottom-center' | 'bottom-right';
+  position?:
+    | 'top-left'
+    | 'top-center'
+    | 'top-right'
+    | 'middle-left'
+    | 'center'
+    | 'middle-right'
+    | 'bottom-left'
+    | 'bottom-center'
+    | 'bottom-right';
 }
 
 const BasePopup: React.FC<BasePopupProps> = ({
@@ -27,7 +36,10 @@ const BasePopup: React.FC<BasePopupProps> = ({
 
   return (
     <div className={styles.overlay} style={overlayStyle} onClick={onClose}>
-      <div className={`${styles.popupContainer} ${styles[position]}`} onClick={(e) => e.stopPropagation()}>
+      <div
+        className={`${styles.popupContainer} ${styles[position]}`}
+        onClick={e => e.stopPropagation()}
+      >
         {children}
       </div>
     </div>

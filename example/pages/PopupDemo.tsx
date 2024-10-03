@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Popup, useExitIntent } from "../../src";
+import React, { useState } from 'react';
+import { Popup, useExitIntent } from '../../src';
 
 const PopupDemo: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,10 +25,7 @@ const PopupDemo: React.FC = () => {
         <img src="https://via.placeholder.com/300" alt="Demo" />
         <button onClick={() => setIsOpen(false)}>Close</button>
       </Popup>
-      <p>
-        Try to move your mouse out of the browser window to trigger the exit
-        intent popup.
-      </p>
+      <p>Try to move your mouse out of the browser window to trigger the exit intent popup.</p>
     </div>
   );
 };

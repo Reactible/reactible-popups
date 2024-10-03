@@ -1,23 +1,19 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-const useInactivityTimer = (
-  callback: () => void,
-  time: number = 30,
-  enabled: boolean = false
-) => {
+const useInactivityTimer = (callback: () => void, time: number = 30, enabled: boolean = false) => {
   useEffect(() => {
     if (!enabled) return;
 
-    let timeout: NodeJS.Timeout;
+    let timeout: ReturnType<typeof setTimeout>;
 
     const resetTimer = () => {
       clearTimeout(timeout);
       timeout = setTimeout(callback, time * 1000);
     };
 
-    const events = ["mousemove", "keydown", "scroll", "touchstart"];
+    const events = ['mousemove', 'keydown', 'scroll', 'touchstart'];
 
-    events.forEach((event) => {
+    events.forEach(event => {
       window.addEventListener(event, resetTimer);
     });
 
@@ -25,7 +21,7 @@ const useInactivityTimer = (
 
     return () => {
       clearTimeout(timeout);
-      events.forEach((event) => {
+      events.forEach(event => {
         window.removeEventListener(event, resetTimer);
       });
     };

@@ -1,6 +1,6 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import PopupDemo from "./pages/PopupDemo";
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import PopupDemo from './pages/PopupDemo';
 
 const DemoComponent: React.FC = () => {
   return (

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 const useExitIntent = (callback: () => void, enabled: boolean = false) => {
   useEffect(() => {
@@ -8,15 +8,15 @@ const useExitIntent = (callback: () => void, enabled: boolean = false) => {
       if (
         event.clientY <= 0 &&
         event.relatedTarget === null &&
-        (event.target as Element).nodeName.toLowerCase() !== "select"
+        (event.target as Element).nodeName.toLowerCase() !== 'select'
       ) {
         callback();
       }
     };
 
-    document.addEventListener("mouseout", handleMouseOut);
+    document.addEventListener('mouseout', handleMouseOut);
     return () => {
-      document.removeEventListener("mouseout", handleMouseOut);
+      document.removeEventListener('mouseout', handleMouseOut);
     };
   }, [callback, enabled]);
 };

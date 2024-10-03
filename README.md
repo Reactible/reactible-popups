@@ -1,3 +1,5 @@
+![Build Status](https://github.com/Reactible/reactible-popups/actions/workflows/ci.yml/badge.svg)
+
 # Reactible Popups
 
 Reactible Popups is a versatile and customizable React popup component library designed to meet various popup needs in modern web applications. It offers a single, flexible `<Popup>` component that can be easily integrated into any React project.
@@ -17,10 +19,10 @@ Reactible Popups is a versatile and customizable React popup component library d
 - Flexible positioning
 
 ## Installation
+
 ```bash
 npm install reactible-popups
 ```
-
 
 ## Usage
 
@@ -31,25 +33,25 @@ import React, { useState } from 'react';
 import { Popup } from 'reactible-popups';
 
 const App = () => {
-const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-return (
-  <div>
-    <button onClick={() => setIsOpen(true)}>Open Popup</button>
-    <Popup
-      isOpen={isOpen}
-      onClose={() => setIsOpen(false)}
-      position="center"
-      overlayColor="rgba(0, 0, 0, 0.5)"
-      overlayOpacity={0.5}
-      closeOnOverlayClick={true}
-      closeOnEscapeKey={true}
-    >
-      <h2>Welcome to our site!</h2>
-      <p>This is a demo of our versatile Popup component.</p>
-      <button onClick={() => setIsOpen(false)}>Close</button>
-    </Popup>
-  </div>
+  return (
+    <div>
+      <button onClick={() => setIsOpen(true)}>Open Popup</button>
+      <Popup
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        position="center"
+        overlayColor="rgba(0, 0, 0, 0.5)"
+        overlayOpacity={0.5}
+        closeOnOverlayClick={true}
+        closeOnEscapeKey={true}
+      >
+        <h2>Welcome to our site!</h2>
+        <p>This is a demo of our versatile Popup component.</p>
+        <button onClick={() => setIsOpen(false)}>Close</button>
+      </Popup>
+    </div>
   );
 };
 
