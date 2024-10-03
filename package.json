@@ -1,6 +1,6 @@
 {
   "name": "reactible-popups",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Reactible-popups allows you to create and customize web popups faster with lots of options.",
   "main": "dist/reactible-popups.umd.js",
   "module": "dist/reactible-popups.es.js",
@@ -34,14 +34,14 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
-  },
-  "dependencies": {
-    "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
     "react-router-dom": "^6.26.2"
   },
+  "dependencies": {},
   "devDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-router-dom": "^6.26.2",
     "@eslint/js": "^9.11.1",
     "@types/node": "^22.7.4",
     "@types/react": "^18.3.3",
