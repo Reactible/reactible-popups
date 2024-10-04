@@ -1,7 +1,12 @@
 {
   "name": "reactible-popups",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Reactible-popups allows you to create and customize web popups faster with lots of options.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Reactible/reactible-popups"
+  },
+  "homepage": "https://github.com/Reactible/reactible-popups#readme",
   "main": "dist/reactible-popups.umd.js",
   "module": "dist/reactible-popups.es.js",
   "types": "dist/index.d.ts",
