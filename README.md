@@ -6,6 +6,12 @@ Reactible Popups is a versatile and customizable React popup component library d
 
 ## Features
 
+![Features 1](https://github.com/user-attachments/assets/1ee39584-d87b-4b27-a7ba-107c41bd8b94)
+
+![Features 2](https://github.com/user-attachments/assets/7567630e-783a-4b7f-bcc8-922d94e176a3)
+
+![Features 3](https://github.com/user-attachments/assets/a57c42b0-1d72-4272-8949-a8bd7cd7cb72)
+
 - TypeScript support for enhanced developer experience
 - Customizable animations for smooth enter/exit transitions
 - Accessibility features including keyboard navigation and screen reader support
